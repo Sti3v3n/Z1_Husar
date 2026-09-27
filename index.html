@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil | Moja Online Vizitka</title>
+    <meta name="description" content="Osobný profil a predstavenie študenta aplikovanej informatiky.">
+    
+    <!-- Open Graph metadáta -->
+    <meta property="og:title" content="Profil | Moja Online Vizitka">
+    <meta property="og:description" content="Osobný profil a predstavenie študenta aplikovanej informatiky.">
+    <meta property="og:image" content="img/me.jpg">
+    <meta property="og:type" content="website">
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+    <a href="#main-content" class="skip-link">Preskočiť na obsah</a>
+
+    <!-- Hlavička so zadaným monogramom a sloganom -->
+    <header class="site-header">
+        <div class="site-header__container container">
+            <div class="site-header__monogram" aria-hidden="true">ŠH</div>
+            <div class="site-header__text">
+                <h1 class="site-header__title">Štefan Husár</h1>
+                <p class="site-header__slogan">Študent aplikovanej informatiky, zaujímajú ma webové technológie.</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigačná lišta -->
+    <nav class="main-nav" aria-label="Hlavná navigácia">
+        <div class="main-nav__container container">
+            <ul class="main-nav__list">
+                <li class="main-nav__item">
+                    <a href="index.html" class="main-nav__link main-nav__link--active">Profil</a>
+                </li>
+                <li class="main-nav__item">
+                    <a href="pages/cv.html" class="main-nav__link">Životopis</a>
+                </li>
+                <li class="main-nav__item">
+                    <a href="pages/workspace.html" class="main-nav__link">Pracovné prostredie</a>
+                </li>
+                <li class="main-nav__item">
+                    <a href="pages/schedule.html" class="main-nav__link">Kedy ma zastihnete</a>
+                </li>
+                <li class="main-nav__item">
+                    <a href="pages/map.html" class="main-nav__link">Kde ma nájdete</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Sem v ďalšom kroku vložíme obsah samotného Profilu -->
+    <main id="main-content" class="main-content container">
+    </main>
+
+    <!-- Pätička -->
+    <footer class="site-footer">
+        <div class="container">
+            <address class="site-footer__contact">
+                Email: <a href="mailto:vas.email@stuba.sk">xhusars@stuba.sk</a> | 
+                Tel: <a href="tel:+421900123456">+421 900 123 456</a>
+            </address>
+            <p class="site-footer__copy">&copy; 2026 Štefan Husár</p>
+            <p class="site-footer__sources">Zdroje: Vlastné materiály a fotografie</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
