@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pracovné prostredie | Moja Online Vizitka</title>
+    <meta name="description" content="Pozrite sa na moje pracovné prostredie.">
+    <meta property="og:title" content="Pracovné prostredie | Moja Online Vizitka">
+    <meta property="og:description" content="Pozrite sa na moje pracovné prostredie.">
+    <meta property="og:image" content="../img/workspace.jpeg">
+    <meta property="og:type" content="website">
+    
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Preskočiť na obsah</a>
+
+    <header class="site-header">
+        <div class="site-header__container container">
+            <div class="site-header__monogram" aria-hidden="true">ŠH</div>
+            <div class="site-header__text">
+                <h1 class="site-header__title">Štefan Husár</h1>
+                <p class="site-header__slogan">Študent aplikovanej informatiky <br>Mám rád weby ale ešte radšej mám pekné popoludnia.</p>
+            </div>
+        </div>
+    </header>
+
+    <nav class="main-nav" aria-label="Hlavná navigácia">
+        <div class="main-nav__container container">
+            <button id="menu-toggle" class="menu-toggle" aria-label="Otvoriť menu" aria-expanded="false">
+             ☰
+            </button>
+            <ul class="main-nav__list" id="main-nav-list">
+                <li class="main-nav__item"><a href="../index.html" class="main-nav__link">Profil</a></li>
+                <li class="main-nav__item"><a href="cv.html" class="main-nav__link">Životopis</a></li>
+                <li class="main-nav__item"><a href="workspace.html" class="main-nav__link main-nav__link--active">Pracovné prostredie</a></li>
+                <li class="main-nav__item"><a href="schedule.html" class="main-nav__link">Kedy ma zastihnete</a></li>
+                <li class="main-nav__item"><a href="map.html" class="main-nav__link">Kde ma nájdete</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main id="main-content" class="main-content container">
+        <h2 class="cv-main__heading" style="margin-top: 2rem;">Moje pracovné prostredie</h2>
+        <p style="margin-bottom: 2rem;">Prejdite myšou alebo kliknite na vyznačené body na obrázku pre viac informácií.</p>
+
+        <!-- Main container for interactive image -->
+        <div class="interactive-workspace">
+            
+            <div class="image-wrapper">
+                <img src="../img/workspace.jpeg" alt="Moje pracovné prostredie s notebookom a kávou" class="workspace-img" width="900" height="600">
+
+                <!-- Hotspot 1 -->
+                <div class="hotspot" style="top: 50%; left: 50%;">
+                    <button class="hotspot__btn" aria-label="Detail o editore"><span class="sr-only">+</span></button>
+                    <div class="hotspot__panel">
+                        <h3>Veľký Monitor</h3>
+                        <p>Dôležitý pre <strong>HTML5</strong> a pri akomkoľvek predmete.</p>
+                    </div>
+                </div>
+
+                <!-- Hotspot 2 -->
+                <div class="hotspot" style="top: 75%; left: 45%;">
+                    <button class="hotspot__btn" aria-label="Detail o klávesnici"><span class="sr-only">+</span></button>
+                    <div class="hotspot__panel">
+                        <h3>Mechanická klávesnica</h3>
+                        <p>Nevyhnutnosť pre rýchle písanie čistého CSS kódu. Má výbornú odozvu.</p>
+                    </div>
+                </div>
+
+                <!-- Hotspot 3 -->
+                <div class="hotspot" style="top: 45%; left: 15%;">
+                    <button class="hotspot__btn" aria-label="Detail o monitore"><span class="sr-only">+</span></button>
+                    <div class="hotspot__panel">
+                        <h3>Druhý monitor</h3>
+                        <p>Slúži mi na okamžitý náhľad zmien cez Live Server (ako práve teraz!).</p>
+                    </div>
+                </div>
+
+                <!-- Hotspot 4 -->
+                <div class="hotspot" style="top: 75%; left: 70%;">
+                    <button class="hotspot__btn" aria-label="Detail o myši"><span class="sr-only">+</span></button>
+                    <div class="hotspot__panel">
+                        <h3>Myš</h3>
+                        <p>Po vyskúšaní viacerých modelov mi táto najlepšie sedí v ruke.</p>
+                    </div>
+                </div>
+
+                <!-- Hotspot 5 -->
+                <div class="hotspot" style="top: 75%; left: 30%;">
+                    <button class="hotspot__btn" aria-label="Detail o káve"><span class="sr-only">+</span></button>
+                    <div class="hotspot__panel">
+                        <h3>Šálka kávy</h3>
+                        <p>Základné "palivo" každého študenta informatiky na FEI STU.</p>
+                    </div>
+                </div>
+            </div> 
+
+            <div class="hotspot-default-panel">
+                <h3>Vyberte bod na obrázku</h3>
+                <p>Kliknutím na body vyššie sa tu zobrazia detaily o mojom prostredí.</p>
+            </div>
+
+        </div>
+
+        <p style="margin-top: 1rem; font-size: 0.9rem; text-align: center;">
+            Zdroj obrázka: Môj Telefón
+        </p>
+    </main>
+
+    <footer class="site-footer">
+    <div class="container">
+        <address class="site-footer__contact">
+            Email: <a href="mailto:xhusars@stuba.sk">xhusars@stuba.sk</a> | 
+            Tel: <a href="tel:+421900123456">+421 900 123 456</a>
+        </address>
+        <p class="site-footer__copy">&copy; 2026 Štefan Husár</p>
+        <p class="site-footer__sources" style="font-size: 0.8rem; margin-top: 0.5rem;">
+            Zdroje: Vlastné fotografie | Mapové podklady: <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>, Knižnica <a href="https://leafletjs.com/" target="_blank" rel="noopener">Leaflet</a>
+        </p>
+    </div>
+</footer>
+    <script src="../js/script.js"></script>
+</body>
+</html>

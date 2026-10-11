@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Životopis | Moja Online Vizitka</title>
+    <meta name="description" content="Môj profesijný životopis, vzdelanie a zručnosti.">
+    
+    <meta property="og:title" content="Životopis | Moja Online Vizitka">
+    <meta property="og:description" content="Môj profesijný životopis, vzdelanie a zručnosti.">
+    <meta property="og:image" content="../img/me.jpg">
+    <meta property="og:type" content="website">
+
+    <link rel="stylesheet" href="../css/styles.css">
+    <!-- Standard formatting style for CV-->
+    <link rel="stylesheet" href="../css/print.css" media="print">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Preskočiť na obsah</a>
+
+    <header class="site-header">
+        <div class="site-header__container container">
+            <div class="site-header__monogram" aria-hidden="true">ŠH</div>
+            <div class="site-header__text">
+                <h1 class="site-header__title">Štefan Husár</h1>
+                <p class="site-header__slogan">Študent aplikovanej informatiky <br>Mám rád weby ale ešte radšej mám pekné popoludnia.</p>
+            </div>
+        </div>
+    </header>
+
+    <nav class="main-nav" aria-label="Hlavná navigácia">
+        <div class="main-nav__container container">
+            <button id="menu-toggle" class="menu-toggle" aria-label="Otvoriť menu" aria-expanded="false">
+                ☰
+                </button>
+            <ul class="main-nav__list" id="main-nav-list">
+                <li class="main-nav__item"><a href="../index.html" class="main-nav__link">Profil</a></li>
+                <li class="main-nav__item"><a href="cv.html" class="main-nav__link main-nav__link--active">Životopis</a></li>
+                <li class="main-nav__item"><a href="workspace.html" class="main-nav__link">Pracovné prostredie</a></li>
+                <li class="main-nav__item"><a href="schedule.html" class="main-nav__link">Kedy ma zastihnete</a></li>
+                <li class="main-nav__item"><a href="map.html" class="main-nav__link">Kde ma nájdete</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main id="main-content" class="main-content container">
+        <article class="cv-layout">
+            <!-- Left column (Grid) -->
+            <aside class="cv-sidebar">
+                <img src="../img/me2.jpg" alt="Portrétová fotografia" width="150" height="150" loading="lazy" class="cv-sidebar__img">
+                <h2 class="cv-sidebar__heading">Kontakt</h2>
+                <address class="cv-contact">
+                    <p>E-mail:<br><a href="mailto:xhusars@stuba.sk">xhusars@stuba.sk</a></p>
+                    <p>Telefón:<br><a href="tel:+421900123456">+421 900 123 456</a></p>
+                </address>
+            </aside>
+
+            <!-- Right column (Grid) -->
+            <section class="cv-main">
+                <h2 class="cv-main__heading">Dosiahnuté vzdelanie</h2>
+                <ul class="cv-list">
+                    <li>
+                        <strong>Slovenská technická univerzita v Bratislave (2024 - Súčasnosť)</strong><br>
+                        Fakulta elektrotechniky a informatiky<br>
+                        Odbor: Aplikovaná informatika
+                    </li>
+                    <li>
+                        <strong>Bilingválne gymnázium Pankúchova (2019-2024)</strong><br>
+                    </li>
+                </ul>
+                <h2 class="cv-main__heading">Počítačové a jazykové zručnosti</h2>
+                <ul class="cv-list">
+                    <li>Sémantické a prístupné značkovanie v HTML5, Pokročilé kaskádové štýly (CSS Grid, Flexbox) a Interaktivita v čistom JavaScripte – <strong>Mierne Pokročilý</strong></li>
+                    <li>Programovacie jazyky (Python, Java, C, C++, SQL) – <strong>Pokročilý</strong></li>
+                    <li>Anglický jazyk – <strong>Úroveň C1</strong></li>
+                </ul>
+            </section>
+        </article>
+    </main>
+
+    <footer class="site-footer">
+    <div class="container">
+        <address class="site-footer__contact">
+            Email: <a href="mailto:xhusars@stuba.sk">xhusars@stuba.sk</a> | 
+            Tel: <a href="tel:+421900123456">+421 900 123 456</a>
+        </address>
+        <p class="site-footer__copy">&copy; 2026 Štefan Husár</p>
+        <p class="site-footer__sources" style="font-size: 0.8rem; margin-top: 0.5rem;">
+            Zdroje: Vlastné fotografie | Mapové podklady: <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>, Knižnica <a href="https://leafletjs.com/" target="_blank" rel="noopener">Leaflet</a>
+        </p>
+    </div>
+</footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+/* css/print.css */
+@media print {
+    body {
+        background-color: #ffffff !important;
+        color: #000000 !important;
+        font-size: 12pt;
+    }
+
+    /* Skrytí hlavičky, navigace a patičky při tisku */
+    .site-header,
+    .main-nav,
+    .site-footer,
+    .skip-link {
+        display: none !important;
+    }
+
+    /* Vypnutí mřížky a stínů u životopisu */
+    .cv-layout {
+        display: block !important;
+        box-shadow: none !important;
+        margin: 0 !important;
+    }
+
+    /* Odstranění barev sloupců */
+    .cv-sidebar, 
+    .cv-main {
+        background-color: transparent !important;
+        color: #000000 !important;
+        padding: 0 !important;
+        text-align: left !important;
+    }
+
+    .cv-sidebar__img {
+        width: 120px !important;
+        height: 120px !important;
+        border: 2px solid #000 !important;
+    }
+
+    .cv-sidebar__heading,
+    .cv-main__heading {
+        color: #000000 !important;
+        border-bottom: 1px solid #000000 !important;
+        page-break-after: avoid;
+    }
+
+    .cv-contact a {
+        color: #000000 !important;
+        text-decoration: none !important;
+    }
+
+    /* Omezení tiskových okrajů na jednu stránku */
+    @page {
+        margin: 2cm;
+    }
+}

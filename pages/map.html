@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kde ma nájdete | Moja Online Vizitka</title>
+    <meta name="description" content="Interaktívna mapa s mojím bydliskom a školou.">
+    <meta property="og:title" content="Kde ma nájdete | Moja Online Vizitka">
+    <meta property="og:description" content="Interaktívna mapa s mojím bydliskom a školou.">
+    <meta property="og:image" content="../img/me.jpg">
+    <meta property="og:type" content="website">
+    
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Preskočiť na obsah</a>
+
+    <header class="site-header">
+        <div class="site-header__container container">
+            <div class="site-header__monogram" aria-hidden="true">ŠH</div>
+            <div class="site-header__text">
+                <h1 class="site-header__title">Štefan Husár</h1>
+                <p class="site-header__slogan">Študent aplikovanej informatiky <br>Mám rád weby ale ešte radšej mám pekné popoludnia.</p>
+            </div>
+        </div>
+    </header>
+
+    <nav class="main-nav" aria-label="Hlavná navigácia">
+        <div class="main-nav__container container">
+            <button id="menu-toggle" class="menu-toggle" aria-label="Otvoriť menu" aria-expanded="false">
+             ☰
+            </button>
+            <ul class="main-nav__list" id="main-nav-list">
+                <li class="main-nav__item"><a href="../index.html" class="main-nav__link">Profil</a></li>
+                <li class="main-nav__item"><a href="cv.html" class="main-nav__link">Životopis</a></li>
+                <li class="main-nav__item"><a href="workspace.html" class="main-nav__link">Pracovné prostredie</a></li>
+                <li class="main-nav__item"><a href="schedule.html" class="main-nav__link">Kedy ma zastihnete</a></li>
+                <li class="main-nav__item"><a href="map.html" class="main-nav__link main-nav__link--active">Kde ma nájdete</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main id="main-content" class="main-content container">
+        <h2 class="cv-main__heading" style="margin-top: 2rem;">Kde ma nájdete</h2>
+        
+        <div class="map-layout">
+            <!-- Controls -->
+            <aside class="map-controls">
+                <!-- Empty state -->
+                <div id="map-empty-state" class="map-panel map-panel--info">
+                    <h3>Ako to funguje?</h3>
+                    <p>Kliknutím kdekoľvek na mapu si môžete pridať vlastný bod záujmu. Následne zistíte, ako ďaleko to máte k mojej škole (FEI STU) alebo domov.</p>
+                </div>
+
+                <div class="map-panel">
+                    <h3>Vaše miesta</h3>
+                    <div class="form-group">
+                        <label for="point-selector">Vyberte pridané miesto:</label>
+                        <select id="point-selector" class="map-select" disabled>
+                            <option value="">Zatiaľ ste nepridali žiadne miesto</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="target-selector">Vypočítať vzdialenosť k:</label>
+                        <select id="target-selector" class="map-select">
+                            <option value="school">FEI STU (Škola)</option>
+                            <option value="home">Bratislava (Bydlisko)</option>
+                        </select>
+                    </div>
+
+                    <button id="calculate-btn" class="filter-btn filter-btn--active" style="width: 100%;" disabled>Vypočítať vzdialenosť</button>
+                    
+                    <div id="distance-result" class="distance-result" hidden>
+                        Vzdialenosť: <strong><span id="distance-value">0</span> km</strong>
+                    </div>
+                </div>
+                
+                <button id="clear-points-btn" class="filter-btn" style="width: 100%; margin-top: var(--space-md); border-color: var(--color-accent); color: var(--color-accent);">Vymazať moje miesta</button>
+            </aside>
+
+            <!-- Space for the map itself -->
+            <div id="map-container" class="map-container"></div>
+        </div>
+
+        <p style="margin-top: 1rem; font-size: 0.9rem; text-align: center;">
+            Mapové podklady: &copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> prispievatelia | Knižnica: <a href="https://leafletjs.com/" target="_blank" rel="noopener">Leaflet</a>
+        </p>
+    </main>
+
+    <footer class="site-footer">
+    <div class="container">
+        <address class="site-footer__contact">
+            Email: <a href="mailto:xhusars@stuba.sk">xhusars@stuba.sk</a> | 
+            Tel: <a href="tel:+421900123456">+421 900 123 456</a>
+        </address>
+        <p class="site-footer__copy">&copy; 2026 Štefan Husár</p>
+        <p class="site-footer__sources" style="font-size: 0.8rem; margin-top: 0.5rem;">
+            Zdroje: Vlastné fotografie | Mapové podklady: <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>, Knižnica <a href="https://leafletjs.com/" target="_blank" rel="noopener">Leaflet</a>
+        </p>
+    </div>
+</footer>
+
+    <!-- Leaflet JS library -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="../js/script.js"></script>
+</body>
+</html>

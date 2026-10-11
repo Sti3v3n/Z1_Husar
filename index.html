@@ -6,7 +6,7 @@
     <title>Profil | Moja Online Vizitka</title>
     <meta name="description" content="Osobný profil a predstavenie študenta aplikovanej informatiky.">
     
-    <!-- Open Graph metadáta -->
+    <!-- Open Graph metadata -->
     <meta property="og:title" content="Profil | Moja Online Vizitka">
     <meta property="og:description" content="Osobný profil a predstavenie študenta aplikovanej informatiky.">
     <meta property="og:image" content="img/me.jpg">
@@ -19,21 +19,24 @@
 
     <a href="#main-content" class="skip-link">Preskočiť na obsah</a>
 
-    <!-- Hlavička so zadaným monogramom a sloganom -->
+    <!-- Header for monogram and slogan -->
     <header class="site-header">
         <div class="site-header__container container">
             <div class="site-header__monogram" aria-hidden="true">ŠH</div>
             <div class="site-header__text">
                 <h1 class="site-header__title">Štefan Husár</h1>
-                <p class="site-header__slogan">Študent aplikovanej informatiky, zaujímajú ma webové technológie.</p>
+                <p class="site-header__slogan">Študent aplikovanej informatiky <br>Mám rád weby ale ešte radšej mám pekné popoludnia.</p>
             </div>
         </div>
     </header>
 
-    <!-- Navigačná lišta -->
+    <!-- Navigation bar -->
     <nav class="main-nav" aria-label="Hlavná navigácia">
         <div class="main-nav__container container">
-            <ul class="main-nav__list">
+            <button id="menu-toggle" class="menu-toggle" aria-label="Otvoriť menu" aria-expanded="false">
+                ☰
+            </button>
+            <ul class="main-nav__list" id="main-nav-list">
                 <li class="main-nav__item">
                     <a href="index.html" class="main-nav__link main-nav__link--active">Profil</a>
                 </li>
@@ -53,21 +56,62 @@
         </div>
     </nav>
 
-    <!-- Sem v ďalšom kroku vložíme obsah samotného Profilu -->
+    <!-- Here is content of the profile -->
     <main id="main-content" class="main-content container">
+        <article class="profile-card">  
+            <img 
+                src="img/me.jpg" 
+                alt="Fotografia Štefana Husára" 
+                width="250" 
+                height="293" 
+                loading="lazy" 
+                class="profile-card__img"
+                style="float: left; margin-right: 1rem; margin-bottom: 1rem;"
+            >
+            <div class="profile-card__content">
+                <h2 class="profile-card__heading">Kto som a čomu sa venujem</h2>
+                
+                <p class="profile-card__text">
+                    Som študentom aplikovanej informatiky na FEI STU so zameraním na webové technológie 
+                    a moderné používateľské rozhrania. 
+                </p>
+                
+                <p class="profile-card__text">
+                    Môj cieľ je aj v dobe umelej inteligencie si zachovať 
+                    schopnosť porozumieť princípom informatiky a poznať svoj kód.
+                </p>
+                
+                <h3 class="profile-card__subheading">Moje 3 kľúčové oblasti:</h3>
+                <ul class="profile-card__list">
+                    <li>Učím sa v oblasti webových technológií a frontend vývoja.</li>
+                    <li>Riešenie logických úloh v programovaní.</li>
+                    <li>Aktívne sa zdokonalujem v jazykoch.</li>
+                </ul>
+            </div>
+            
+            <!-- higlighted quote -->
+            <aside class="profile-quote">
+                <blockquote class="profile-quote__text">
+                    „It always seems impossible until it's done.“
+                </blockquote>
+            </aside>
+
+        </article>
     </main>
 
-    <!-- Pätička -->
+    <!-- Footer -->
     <footer class="site-footer">
-        <div class="container">
-            <address class="site-footer__contact">
-                Email: <a href="mailto:vas.email@stuba.sk">xhusars@stuba.sk</a> | 
-                Tel: <a href="tel:+421900123456">+421 900 123 456</a>
-            </address>
-            <p class="site-footer__copy">&copy; 2026 Štefan Husár</p>
-            <p class="site-footer__sources">Zdroje: Vlastné materiály a fotografie</p>
-        </div>
-    </footer>
+    <div class="container">
+        <address class="site-footer__contact">
+            Email: <a href="mailto:xhusars@stuba.sk">xhusars@stuba.sk</a> | 
+            Tel: <a href="tel:+421900123456">+421 900 123 456</a>
+        </address>
+        <p class="site-footer__copy">&copy; 2026 Štefan Husár</p>
+        <p class="site-footer__sources" style="font-size: 0.8rem; margin-top: 0.5rem;">
+            Zdroje: Vlastné fotografie | Mapové podklady: <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>, Knižnica <a href="https://leafletjs.com/" target="_blank" rel="noopener">Leaflet</a>
+        </p>
+    </div>
+</footer>
 
     <script src="js/script.js"></script>
 </body>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kedy ma zastihnete | Moja Online Vizitka</title>
+    <meta name="description" content="Môj týždenný rozvrh na univerzite.">
+    <meta property="og:title" content="Kedy ma zastihnete | Moja Online Vizitka">
+    <meta property="og:description" content="Môj týždenný rozvrh na univerzite.">
+    <meta property="og:image" content="../img/me.jpg">
+    <meta property="og:type" content="website">
+    
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Preskočiť na obsah</a>
+
+    <header class="site-header">
+        <div class="site-header__container container">
+            <div class="site-header__monogram" aria-hidden="true">ŠH</div>
+            <div class="site-header__text">
+                <h1 class="site-header__title">Štefan Husár</h1>
+                <p class="site-header__slogan">Študent aplikovanej informatiky <br>Mám rád weby ale ešte radšej mám pekné popoludnia.</p>
+            </div>
+        </div>
+    </header>
+
+    <nav class="main-nav" aria-label="Hlavná navigácia">
+        <div class="main-nav__container container" >
+            <button id="menu-toggle" class="menu-toggle" aria-label="Otvoriť menu" aria-expanded="false">
+             ☰
+            </button>
+            <ul class="main-nav__list" id="main-nav-list">
+                <li class="main-nav__item"><a href="../index.html" class="main-nav__link">Profil</a></li>
+                <li class="main-nav__item"><a href="cv.html" class="main-nav__link">Životopis</a></li>
+                <li class="main-nav__item"><a href="workspace.html" class="main-nav__link">Pracovné prostredie</a></li>
+                <li class="main-nav__item"><a href="schedule.html" class="main-nav__link main-nav__link--active">Kedy ma zastihnete</a></li>
+                <li class="main-nav__item"><a href="map.html" class="main-nav__link">Kde ma nájdete</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main id="main-content" class="main-content container">
+        <h2 class="cv-main__heading" style="margin-top: 2rem;">Môj rozvrh (Zimný semester)</h2>
+        
+        <!-- Filters for JavaScript -->
+        <div class="schedule-filters">
+            <button class="filter-btn filter-btn--active" data-filter="all">Všetko</button>
+            <button class="filter-btn" data-filter="lecture">Prednášky</button>
+            <button class="filter-btn" data-filter="exercise">Cvičenia</button>
+            <button class="filter-btn" data-filter="other">Telesná</button>
+        </div>
+
+        <!-- Notifications (Hidden via CSS, JS will enable them) -->
+        <div id="schedule-message" class="schedule-message" hidden>
+            Aktuálne neprebieha žiadna výučba.
+        </div>
+        <div id="filter-message" class="schedule-message" hidden>
+            Pre tento filter nie sú v rozvrhu žiadne hodiny.
+        </div>
+
+        <!-- Responsive table container -->
+        <div class="table-responsive">
+            <table class="schedule-table">
+                <thead>
+                    <tr>
+                        <th>Deň</th>
+                        <th>7:00</th>
+                        <th>8:00</th>
+                        <th>9:00</th>
+                        <th>10:00</th>
+                        <th>11:00</th>
+                        <th>12:00</th>
+                        <th>13:00</th>
+                        <th>14:00</th>
+                        <th>15:00</th>
+                        <th>16:00</th>
+                        <th>17:00</th>
+                        <th>18:00</th>
+                        <th>19:00</th>
+                        <th>20:00</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Monday -->
+                    <tr>
+                        <th>Pondelok</th>
+                        <td class="empty-slot" colspan="2"></td> 
+                        <td class="exercise" data-type="exercise" colspan="2"><strong>Webové technológie 1</strong><br>Cvičenie</td>
+                        <td class="empty-slot" colspan="2"></td> 
+                        <td class="exercise" data-type="exercise" colspan="2"><strong>Operačné systémy</strong><br>Cvičenie</td>
+                        <td class="lecture" data-type="lecture" colspan="2"><strong>Lineárna algebra 2</strong><br>Prednáška</td>
+                        <td class="empty-slot" colspan="4"></td> 
+                    </tr>
+                    
+                    <!-- Tuesday -->
+                    <tr>
+                        <th>Utorok</th>
+                        <td class="empty-slot"></td> 
+                        <td class="lecture" data-type="lecture" colspan="2"><strong>Analýza a zložitosť algoritmov</strong><br>Prednáška</td>
+                        <td class="lecture" data-type="lecture" colspan="2"><strong>Webové technológie 1</strong><br>Prednáška</td>
+                        <td class="empty-slot"></td> 
+                        <td class="lecture" data-type="lecture" colspan="2"><strong>Matematická štatistika</strong><br>Prednáška</td>
+                        <td class="pe" data-type="other"><strong>Telesná výchova</strong><br>Cvičenie</td>
+                        <td class="empty-slot" colspan="5"></td> 
+                    </tr>
+                    
+                    <!-- Wednesday -->
+                    <tr>
+                        <th>Streda</th>
+                        <td class="empty-slot"></td> 
+                        <td class="lecture" data-type="lecture" colspan="2"><strong>Operačné systémy</strong><br>Prednáška</td>
+                        <td class="lecture" data-type="lecture" colspan="2"><strong>Analýza a zložitosť algoritmov</strong><br>Prednáška</td>
+                        <td class="empty-slot"></td> 
+                        <td class="lecture" data-type="lecture" colspan="2"><strong>Webové technológie 1</strong><br>Prednáška</td> 
+                        <td class="exercise" data-type="exercise" colspan="2"><strong>Matematická štatistika</strong><br>Cvičenie</td> 
+                        <td class="empty-slot" colspan="4"></td> 
+                    </tr>
+                    
+                    <!-- Thursday -->
+                    <tr>
+                        <th>Štvrtok</th>
+                        <td class="empty-slot" colspan="14" style="text-align: center; color: var(--color-brand-secondary);">Voľno - samoštúdium</td>
+                    </tr>
+                    
+                    <!-- Friday -->
+                    <tr>
+                        <th>Piatok</th>
+                        <td class="empty-slot" colspan="2"></td> 
+                        <td class="exercise" data-type="exercise" colspan="2"><strong>Analýza a zložitosť algoritmov</strong><br>Cvičenie</td>
+                        <td class="empty-slot" colspan="4"></td> 
+                        <td class="exercise" data-type="exercise" colspan="2"><strong>Lineárna algebra 2</strong><br>Cvičenie</td>
+                        <td class="empty-slot" colspan="4"></td> 
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Progress bar for semester -->
+        <div class="semester-progress">
+            <div class="semester-progress__header">
+                <span>Priebeh semestra</span>
+                <span id="progress-text">0 %</span>
+            </div>
+            <div class="semester-progress__track">
+                <div id="progress-bar" class="semester-progress__fill" style="width: 0%;"></div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+    <div class="container">
+        <address class="site-footer__contact">
+            Email: <a href="mailto:xhusars@stuba.sk">xhusars@stuba.sk</a> | 
+            Tel: <a href="tel:+421900123456">+421 900 123 456</a>
+        </address>
+        <p class="site-footer__copy">&copy; 2026 Štefan Husár</p>
+        <p class="site-footer__sources" style="font-size: 0.8rem; margin-top: 0.5rem;">
+            Zdroje: Vlastné fotografie | Mapové podklady: <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>, Knižnica <a href="https://leafletjs.com/" target="_blank" rel="noopener">Leaflet</a>
+        </p>
+    </div>
+</footer>
+    <script src="../js/script.js"></script>
+</body>
+</html>
